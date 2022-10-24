@@ -1,0 +1,339 @@
+@charset "UTF-8";
+
+/*-------------------------------------------
+common
+-------------------------------------------*/
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: .9rem;
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.site_title {
+  font-size:  5rem;
+  font-weight: bold;
+  color: #333;
+  filter: drop-shadow(2px 2px 2px #fff);
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: .3rem;
+  /* 改行によるレイアウト崩れを防ぐ */
+  white-space: nowrap;
+}
+
+.section_title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  filter: drop-shadow(1px 1px 2px #fff);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.item_title {
+  display: inline-block;
+  /* ↑border-bottomを文字幅に合わせる */
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 4px solid #e9967a;
+  padding-bottom: 5px;
+  margin-bottom: 70px;
+}
+
+/* 各セクションのパララクスの設定 */
+.parallax {
+  width: 100%;
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper {
+  max-width: 1000px;
+  padding: 90px 16px 150px;
+  margin: 0 auto;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../img/mainvisual.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#header nav {
+  padding: 20px 40px;
+}
+
+#header nav ul {
+  display: flex;
+  justify-content: right;
+}
+
+#header nav li {
+  margin-left: 30px;
+  line-height: 1;
+}
+
+#header nav li a {
+  color: #333;
+  font-weight: bold;
+  filter: drop-shadow(2px 2px 2px #fff);
+  transition: all .5s;
+}
+
+#header nav li a:hover{
+  color: gray;
+}
+/*-------------------------------------------
+Menu
+-------------------------------------------*/
+#menu .parallax {
+  background-image: url(../img/menu.jpg);
+  position: relative;
+}
+
+#menu .menu_content {
+  display: flex;
+  text-align: center;
+}
+
+#menu .menu_item {
+  width: 50%;
+  padding: 0 40px;
+}
+
+/* 中央線 */
+#menu .menu_content .center_line {
+  width: 1px;
+  background-color: #e9967a;
+}
+
+#menu .menu_item dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#menu .menu_item dt {
+  width: 90%;
+  text-align: left;
+  border-bottom: 1px dotted #333;
+  padding-bottom: 5px;
+}
+
+#menu .menu_item dd {
+  width: 10%;
+  text-align: right;
+}
+
+#menu .menu_item dt,
+#menu .menu_item dd {
+  margin-bottom: 30px;
+  line-height: 1;
+}
+
+#menu .menu_item .food {
+  margin-bottom: 75px;
+}
+/*-------------------------------------------
+About
+-------------------------------------------*/
+#about .parallax {
+  background-image: url(../img/about.jpg);
+  position: relative;
+}
+
+#about .about_contain {
+ text-align: center;
+}
+
+#about .about_contain ul {
+  display: flex;
+  text-align: left;
+  flex-wrap: wrap; 
+  margin-bottom: 20px;
+}
+
+#about .about_contain li {
+  width: 50%;
+  line-height: 2;
+  padding: 2%;
+}
+
+#about .about_contain .btn {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  position: relative;
+  
+}
+
+#about .about_contain .btn::before,
+#about .about_contain .btn::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  transition: all .3s ;
+}
+
+#about .about_contain .btn::before {
+  border-left: 4px solid #e9967a;
+  border-top: 4px solid #e9967a;
+  top: 0;
+  left: 0;
+}
+
+#about .about_contain .btn::after {
+  border-right: 4px solid #e9967a;
+  border-bottom: 4px solid #e9967a;
+  right: 0;
+  bottom: 0;
+}
+
+#about .about_contain .btn:hover::after,
+#about .about_contain .btn:hover::before {
+  width: 100%;
+  height: 100%;
+}
+/*-------------------------------------------
+Location
+-------------------------------------------*/
+#location .parallax {
+  background-image: url(../img/location.jpg);
+  position: relative;
+}
+
+#location .location_contain {
+  text-align: center;
+}
+
+#location .location_contain .item_map {
+  margin-bottom: 20px;
+  filter: grayscale(100%);
+}
+
+#location .location_contain .item_map iframe {
+  width: 100%;
+  height: 400px;
+}
+
+#location .location_contain .item_info {
+  text-align: left;
+}
+
+#location .location_contain .item_info p {
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+/*-------------------------------------------
+Footer
+-------------------------------------------*/
+#footer {
+  font-size: .75rem;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 767px) {
+  /*-------------------------------------------
+  common
+  -------------------------------------------*/
+  .site_title {
+    /* スマホ表示では2行で表示。 */
+    white-space: normal;
+  }
+
+  .parallax {
+    width: 100%;
+    height: 100px;
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .section_title {
+    font-size: 2rem;
+  }
+  
+  .item_title {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+  }
+
+  .wrapper {
+    max-width: 1000px;
+    padding: 30px 16px 60px;
+    margin: 0 auto;
+  }
+  /*-------------------------------------------
+  header
+  -------------------------------------------*/
+  #header {
+    /* スマホ表示ではsite_titleを2行、中央揃えで表示。 */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  /*-------------------------------------------
+  Menu
+  -------------------------------------------*/
+  #menu .menu_content {
+    flex-direction: column;
+  }
+
+  /* スマホ表示では中央線は無効化。 */
+  #menu .menu_content .center_line {
+    display: none;
+  }
+
+  #menu .menu_item {
+    width: 100%;
+    padding: 0;
+  }
+
+  #menu .menu_item .food {
+    margin-bottom: 10px;
+  }
+  /*-------------------------------------------
+  About
+  -------------------------------------------*/
+  #about .about_contain ul {
+    margin-bottom: 40px;
+  }
+  
+  #about .about_contain li {
+    width: 100%;
+  }
+}
