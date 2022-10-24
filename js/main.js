@@ -2,6 +2,7 @@
 // -----------------------
 // スムーススクロール
 // -----------------------
+
 // a href = "id名"となっている要素を取得
 //smoothScrollTrigger [a , a , a , a.btn]
 const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
